@@ -1,0 +1,203 @@
+{
+  "configuration": {
+    "commands_requested": 1000,
+    "scenario_distribution": {
+      "VALID_HKR": 180,
+      "VALID_MEMORY": 150,
+      "VALID_FUNCTION": 130,
+      "VALID_CONNECTION": 120,
+      "NOISE_PLUS_VALID": 100,
+      "CRC_FAULT": 80,
+      "BAD_AUTH": 70,
+      "HEADER_MISMATCH": 60,
+      "UNKNOWN_AUTH_COMMAND": 40,
+      "MALFORMED_SECURITY": 30,
+      "MALFORMED_PACKET": 20,
+      "REPLAY": 20
+    }
+  },
+  "summary": {
+    "total": 1000,
+    "accepted": 680,
+    "rejected": 320,
+    "acceptance_rate_pct": 68.0,
+    "rejection_rate_pct": 32.0,
+    "latency_mean_ms": 0.0846162739853753,
+    "latency_median_ms": 0.07744649974483764,
+    "latency_p95_ms": 0.12015259976578811,
+    "latency_p99_ms": 0.43789952015686057,
+    "latency_max_ms": 2.490120000402385,
+    "latency_min_ms": 0.0,
+    "throughput_cmd_s": 3939.56766237644
+  },
+  "by_scenario": {
+    "VALID_HKR": {
+      "total": 180,
+      "accepted": 180,
+      "rejected": 0,
+      "stages": {
+        "ROUTER": 180
+      },
+      "reasons": {
+        "END_TO_END_ROUTED": 180
+      }
+    },
+    "VALID_MEMORY": {
+      "total": 150,
+      "accepted": 150,
+      "rejected": 0,
+      "stages": {
+        "ROUTER": 150
+      },
+      "reasons": {
+        "END_TO_END_ROUTED": 150
+      }
+    },
+    "VALID_FUNCTION": {
+      "total": 130,
+      "accepted": 130,
+      "rejected": 0,
+      "stages": {
+        "ROUTER": 130
+      },
+      "reasons": {
+        "END_TO_END_ROUTED": 130
+      }
+    },
+    "VALID_CONNECTION": {
+      "total": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "stages": {
+        "ROUTER": 120
+      },
+      "reasons": {
+        "END_TO_END_ROUTED": 120
+      }
+    },
+    "NOISE_PLUS_VALID": {
+      "total": 100,
+      "accepted": 100,
+      "rejected": 0,
+      "stages": {
+        "ROUTER": 100
+      },
+      "reasons": {
+        "END_TO_END_ROUTED": 100
+      }
+    },
+    "CRC_FAULT": {
+      "total": 80,
+      "accepted": 0,
+      "rejected": 80,
+      "stages": {
+        "FRAME": 80
+      },
+      "reasons": {
+        "NO_VALID_FRAME": 80
+      }
+    },
+    "BAD_AUTH": {
+      "total": 70,
+      "accepted": 0,
+      "rejected": 70,
+      "stages": {
+        "SECURITY": 70
+      },
+      "reasons": {
+        "AUTHENTICATION_FAILED": 70
+      }
+    },
+    "HEADER_MISMATCH": {
+      "total": 60,
+      "accepted": 0,
+      "rejected": 60,
+      "stages": {
+        "ROUTING": 60
+      },
+      "reasons": {
+        "AUTHENTICATED_HEADER_MISMATCH": 60
+      }
+    },
+    "UNKNOWN_AUTH_COMMAND": {
+      "total": 40,
+      "accepted": 0,
+      "rejected": 40,
+      "stages": {
+        "ROUTING": 40
+      },
+      "reasons": {
+        "UNKNOWN_AUTHENTICATED_COMMAND": 40
+      }
+    },
+    "MALFORMED_SECURITY": {
+      "total": 30,
+      "accepted": 0,
+      "rejected": 30,
+      "stages": {
+        "SECURITY": 30
+      },
+      "reasons": {
+        "MALFORMED_SECURITY_ENVELOPE": 30
+      }
+    },
+    "MALFORMED_PACKET": {
+      "total": 20,
+      "accepted": 0,
+      "rejected": 20,
+      "stages": {
+        "FRAME/PACKET": 20
+      },
+      "reasons": {
+        "data length mismatch: header says 7, got 11": 20
+      }
+    },
+    "REPLAY": {
+      "total": 20,
+      "accepted": 0,
+      "rejected": 20,
+      "stages": {
+        "SECURITY": 20
+      },
+      "reasons": {
+        "REPLAY_OR_OLD_COUNTER": 20
+      }
+    }
+  },
+  "by_stage": {
+    "ROUTER": 680,
+    "FRAME": 80,
+    "SECURITY": 120,
+    "ROUTING": 100,
+    "FRAME/PACKET": 20
+  },
+  "by_reason": {
+    "END_TO_END_ROUTED": 680,
+    "NO_VALID_FRAME": 80,
+    "AUTHENTICATION_FAILED": 70,
+    "AUTHENTICATED_HEADER_MISMATCH": 60,
+    "UNKNOWN_AUTHENTICATED_COMMAND": 40,
+    "MALFORMED_SECURITY_ENVELOPE": 30,
+    "data length mismatch: header says 7, got 11": 20,
+    "REPLAY_OR_OLD_COUNTER": 20
+  },
+  "by_command": {
+    "HKR": 340,
+    "MEM": 150,
+    "FUN": 130,
+    "CON": 120,
+    "null": 220,
+    "ZZZ": 40
+  },
+  "processor_counters": {
+    "streams": 1000,
+    "frames": 920,
+    "routed": 680,
+    "security_rejects": 120,
+    "replay_rejects": 20,
+    "packet_rejects": 100,
+    "routing_rejects": 100,
+    "crc_rejects": 20
+  },
+  "elapsed_s": 0.2538349600008587
+}

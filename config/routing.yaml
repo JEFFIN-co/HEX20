@@ -1,0 +1,36 @@
+# Prototype routing table: 32 configurable APID entries.
+# Final HEX20 integration must replace these example assignments with the
+# competition-provided APID/service/subtype definitions.
+routes:
+  100: {service: 3, subtype: 1, handler: housekeeping}
+  101: {service: 6, subtype: 2, handler: memory}
+  102: {service: 8, subtype: 128, handler: function_management}
+  103: {service: 17, subtype: 1, handler: connection}
+  104: {service: 3, subtype: 1, handler: housekeeping}
+  105: {service: 6, subtype: 2, handler: memory}
+  106: {service: 8, subtype: 128, handler: function_management}
+  107: {service: 17, subtype: 1, handler: connection}
+  108: {service: 3, subtype: 1, handler: housekeeping}
+  109: {service: 6, subtype: 2, handler: memory}
+  110: {service: 8, subtype: 128, handler: function_management}
+  111: {service: 17, subtype: 1, handler: connection}
+  112: {service: 3, subtype: 1, handler: housekeeping}
+  113: {service: 6, subtype: 2, handler: memory}
+  114: {service: 8, subtype: 128, handler: function_management}
+  115: {service: 17, subtype: 1, handler: connection}
+  116: {service: 3, subtype: 1, handler: housekeeping}
+  117: {service: 6, subtype: 2, handler: memory}
+  118: {service: 8, subtype: 128, handler: function_management}
+  119: {service: 17, subtype: 1, handler: connection}
+  120: {service: 3, subtype: 1, handler: housekeeping}
+  121: {service: 6, subtype: 2, handler: memory}
+  122: {service: 8, subtype: 128, handler: function_management}
+  123: {service: 17, subtype: 1, handler: connection}
+  124: {service: 3, subtype: 1, handler: housekeeping}
+  125: {service: 6, subtype: 2, handler: memory}
+  126: {service: 8, subtype: 128, handler: function_management}
+  127: {service: 17, subtype: 1, handler: connection}
+  128: {service: 3, subtype: 1, handler: housekeeping}
+  129: {service: 6, subtype: 2, handler: memory}
+  130: {service: 8, subtype: 128, handler: function_management}
+  131: {service: 17, subtype: 1, handler: connection}
