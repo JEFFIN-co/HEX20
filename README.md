@@ -1,10 +1,10 @@
-# HEX20 — Onboard Telecommand Reception & Routing
+# Onboard Telecommand Reception & Routing
 
 A software prototype for the HEX20 COSPAR Flight Software problem statement **“Onboard Telecommand Reception & Routing.”**
 
 The system demonstrates an end-to-end onboard telecommand pipeline that receives commands from a noisy uplink, validates the transfer frame and space packet, authenticates the command, protects against replay, validates APID/service/subtype information, and routes the command to the appropriate handler.
 
-## 🚀 Overview
+##  Overview
 
 ```text
 Ground Telecommand
@@ -48,7 +48,7 @@ Telemetry / Housekeeping
    Live Dashboard
 ```
 
-## 🎯 Objectives
+##  Objectives
 
 - Receive telecommands from a noisy uplink stream.
 - Detect and synchronize transfer frames.
@@ -64,7 +64,7 @@ Telemetry / Housekeeping
 - Provide a live Streamlit dashboard.
 - Validate the complete pipeline through large-scale simulation.
 
-## 🛰️ Supported Commands
+##  Supported Commands
 
 | Command | APID | Service | Subtype | Purpose |
 |---|---:|---:|---:|---|
@@ -75,7 +75,7 @@ Telemetry / Housekeeping
 
 The routing design supports a configurable table with **32+ APID entries**.
 
-## 🔐 Security Layer
+##  Security Layer
 
 The security gate is placed **before application routing**.
 
@@ -91,7 +91,7 @@ The prototype includes:
 
 > **Important:** This is a research and demonstration prototype. It is not flight-qualified cryptography and does not provide a production spacecraft key-management system.
 
-## 🧪 Fault Injection
+##  Fault Injection
 
 The simulator can exercise:
 
@@ -116,7 +116,7 @@ Replay                   → SECURITY REJECT
 Malformed Packet         → PACKET/FRAME REJECT
 ```
 
-## 📊 Validation
+##  Validation
 
 The final prototype was exercised using a **1,000-command validation campaign** containing valid commands and multiple fault/security scenarios.
 
@@ -133,7 +133,7 @@ validation/
 
 The measurements are **local software-prototype measurements**, not spacecraft flight qualification.
 
-## 🖥️ Live Dashboard
+##  Live Dashboard
 
 The project provides a Streamlit dashboard for live demonstration.
 
@@ -149,7 +149,7 @@ The dashboard can:
 - Display counters and processing latency.
 - Show the end-to-end processing chain.
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 hex20-telecommand-router/
@@ -184,7 +184,7 @@ hex20-telecommand-router/
     └── run_tests.ps1
 ```
 
-## ⚙️ Installation
+##  Installation
 
 ### 1. Clone the repository
 
@@ -215,7 +215,7 @@ source venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## ▶️ Run the Live Demo
+##  Run the Live Demo
 
 From the project root:
 
@@ -236,7 +236,7 @@ Open:
 http://localhost:8501
 ```
 
-## 🧪 Run Tests
+##  Run Tests
 
 ```bash
 pytest
@@ -248,7 +248,7 @@ Or on Windows:
 .\scripts\run_tests.ps1
 ```
 
-## 🎬 Recommended Demonstration
+##  Recommended Demonstration
 
 ### 1. Valid command
 
@@ -288,7 +288,7 @@ HKR → ROUTING REJECT
 
 This demonstrates both the normal processing path and the rejection behavior.
 
-## 📈 Performance
+##  Performance
 
 Local prototype measurements demonstrated sub-millisecond processing latency for the tested command-processing pipeline.
 
@@ -296,7 +296,7 @@ Exact validation results are available in `validation/`.
 
 These measurements depend on the development machine and software environment and should not be interpreted as spacecraft hardware timing qualification.
 
-## ⚠️ Limitations
+##  Limitations
 
 This project is a research/prototype implementation.
 
@@ -312,7 +312,7 @@ A production or flight implementation would require:
 - Spacecraft-specific interface integration.
 - Formal verification where applicable.
 
-## 🔭 Future Work
+##  Future Work
 
 - Hardware-in-the-loop simulation.
 - More complete CCSDS channel coding.
@@ -324,7 +324,7 @@ A production or flight implementation would require:
 - Extended telemetry visualization.
 - Automated continuous validation.
 
-## 📜 Project Status
+##  Project Status
 
 **Status: Prototype / Demonstration Ready**
 
@@ -342,7 +342,7 @@ The project currently provides:
 - Live dashboard.
 - Automated validation.
 
-## 👨‍💻 Project
+##  Project
 
 **HEX20 — Onboard Telecommand Reception & Routing**
 
