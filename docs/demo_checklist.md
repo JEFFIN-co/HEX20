@@ -3,7 +3,6 @@
 ## Before demo
 - [ ] Activate Python virtual environment.
 - [ ] Install M9 requirements.
-- [ ] Confirm M9 dashboard launches with `python -m streamlit run hex20_m9_live_dashboard.py`.
 - [ ] Keep M10 validation report and results open.
 
 ## Live demo
